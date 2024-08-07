@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang=”en”>
+
+<head>
+
+  <meta charset=”UTF-8”>
+
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+
+  <title>Car Rental Junction</title>
+
+  <style>
+
+    Body {
+
+      Margin: 0;
+
+      Padding: 0;
+
+      Font-family: ‘Arial’, sans-serif;
+
+    }
+
+
+
+    #welcome-section {
+
+      Background-color: #3498db;
+
+      Color: #fff;
+
+      Text-align: center;
+
+      Padding: 20px;
+
+    }
+
+
+
+    #boxes-container {
+
+      Display: flex;
+
+      Justify-content: space-around;
+
+      Margin: 50px 0;
+
+    }
+
+
+
+    .box {
+
+      Width: 200px;
+
+      Height: 100px;
+
+      Text-align: center;
+
+      Line-height: 100px;
+
+      Font-size: 20px;
+
+    }
+
+
+
+    #requirement-box {
+
+      Background-color: #27ae60;
+
+      Color: #fff;
+
+    }
+
+
+
+    #providing-box {
+
+      Background-color: #e74c3c;
+
+      Color: #fff;
+
+    }
+
+
+
+    #location-input {
+
+      Text-align: center;
+
+      Padding: 20px;
+
+    }
+
+
+
+    #option-selection {
+
+      Text-align: center;
+
+      Padding: 20px;
+
+    }
+
+
+
+    #result-message {
+
+      Text-align: center;
+
+      Padding: 20px;
+
+    }
+
+
+
+    #footer {
+
+      Text-align: center;
+
+      Background-color: #ecf0f1;
+
+      Padding: 20px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <div id=”welcome-section”>
+
+    <h1>Welcome to vehicle Rental Junction</h1>
+
+  </div>
+
+
+
+  <div id=”boxes-container”>
+
+    <div id=”requirement-box” class=”box”>REQUIREMENT</div>
+
+    <div id=”providing-box” class=”box”>PROVIDING</div>
+
+  </div>
+
+
+
+  <div id=”location-input”>
+
+    <h2>Enter Your Locality Pin Code or Address:</h2>
+
+    <input type=”text” id=”locality-input” placeholder=”Enter Pin Code or Address”>
+
+    <button onclick=”submitLocation()”>Submit</button>
+
+  </div>
+
+
+
+  <div id=”option-selection” style=”display: none;”>
+
+    <h2>Choose an Option:</h2>
+
+    <button onclick=”chooseOption(‘providing’)”>Providing</button>
+
+    <button onclick=”chooseOption(‘requirement’)”>Requirement</button>
+
+  </div>
+
+
+
+  <div id=”result-message” style=”display: none;”>
+
+    <p id=”chosen-option-message”></p>
+
+  </div>
+
+
+
+  <div id=”footer”>
+
+    <p>This app is a junction to make a relation between the people who are interested in giving their vehicles for rent and the people who are interested in taking vehicles for rent.</p>
+
+  </div>
+
+
+
+  <script>
+
+    Function submitLocation() {
+
+      Document.getElementById(‘location-input’).style.display = ‘none’;
+
+      Document.getElementById(‘option-selection’).style.display = ‘block’;
+
+    }
+
+
+
+    Function chooseOption(option) {
+
+      Document.getElementById(‘option-selection’).style.display = ‘none’;
+
+      Document.getElementById(‘result-message’).style.display = ‘block’;
+
+      Document.getElementById(‘chosen-option-message’).innerText = ‘Choose your vehicle for ‘ + option + ‘.’;
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
